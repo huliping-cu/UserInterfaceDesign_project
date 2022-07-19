@@ -1,0 +1,67 @@
+
+
+
+{% extends "layout.html" %}
+{% block content %}
+<html>
+    <!-- my javascript file -->
+    <script type="text/javascript" src="{{ url_for('static', filename = 'view.js') }}"></script>
+
+
+        
+    <script>
+        let data = {{data|tojson}} 
+        // console.log(data)
+    </script>
+
+    <body>
+        <br>
+        <div class = "container">
+            <br><div class="row"  id="nameColumn">
+                <div class = "col-md-3 "> Name </div>
+                <!-- <div class = "col-md-12 " id="nameColumn"> Name </div> -->
+            </div>
+            <br><div class="row"  id="imageColumn">
+                <div class = "col-md-3 "> Image </div>
+            </div>
+
+            <br><div class="row"  id="priceColumn">
+                <div class = "col-md-3 "> Price </div>
+            </div>
+
+            <br><div class="row"  id="descriptionColumn">
+                <div class = "col-md-3 "> Description </div>
+            </div>
+
+            <br><div class="row"  id="reviewColumn">
+                <div class = "col-md-3 "> Review </div>
+                <div class = "col-md-6" id="reviewDiv">  </div>
+            </div>
+
+            <br><div class="row">
+                <div class = "col-md-12 " id="updates"> 
+                    <div class = row>
+                        <div id ="edit"><button  id ="editButton"> edit </button> </div>
+                        <div>
+                            <form action="http://127.0.0.1:5000/">
+                                <button  id ="searchButton"> search </button>
+                            </form> 
+                        </div>
+                    </div>
+                    
+
+            </div>
+
+
+        </div>
+
+      
+
+
+    
+
+    </body>
+    
+</html>
+{% endblock %}
+

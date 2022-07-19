@@ -1,0 +1,121 @@
+
+
+
+{% extends "layout.html" %}
+{% block content %}
+<html>
+    <!-- my javascript file -->
+    <script type="text/javascript" src="{{ url_for('static', filename = 'add.js') }}"></script>
+
+
+        
+    <script>
+        let data = {{data|tojson}} 
+        let current_id = {{current_id|tojson}}
+        // console.log(data)
+    </script>
+
+    <body>
+        <div class = "container">
+            <div class = "row"> 
+                <div class = "create  bold"> Create New Item Here</div>
+            </div>
+            <br><br>
+            
+            <div class="row">
+                <div class = "col-md-12 " id="updates"> 
+            </div>
+<!-- 
+            
+<div class="row">
+    <div class="col-md-12">
+        <div class="alert alert-primary" role="alert" id="top-notification">
+            
+        </div>
+    </div>
+</div> -->
+
+            <div class = "row">
+                
+              
+                <form id="new-form" >
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Name</label>
+                            <div class="col-sm-4" id="form-name">
+                                <input type="text" class="form-control" id="input-name" name="name" placeholder="name" >
+                                <div id = "warning"  class='invalid-feedback'></div>
+                            </div>
+                        </div>
+                    
+
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Price</label>
+                            <div class="col-sm-4" id="form-price">
+                                <input type="text" min="1" max="99" class="form-control" id="input-price" placeholder="60" >
+                                <div id = "price_warning"  class='invalid-feedback'></div>
+                            </div>
+                        </div>  
+                        
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Image link</label>
+                            <div class="col-sm-10" id="form-image">
+                                <input  class="form-control" id="input-image" placeholder="url" >
+                                <div id="warning-image" class='invalid-feedback' >
+                                    <!-- Please provide a valid link of an image. -->
+                                </div>
+                            </div>
+                        </div> 
+
+                    
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Description</label>
+                            <div class="col-sm-10" id="form-description">
+                                <textarea class="form-control" id="input-description" rows="3" placeholder="description" ></textarea>
+                                <div id="warning-description" class='invalid-feedback' >
+                                    <!-- Please provide a valid link of an image. -->
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Review</label>
+                            <div class="col-sm-10" id="form-description">
+                                <textarea class="form-control" id="input-review" rows="3" placeholder="review" ></textarea>
+                                <div id="warning-review" class='invalid-feedback' >
+                                    <!-- Please provide a valid link of an image. -->
+                                </div>
+                            </div>
+                        </div>
+
+
+                 
+                    
+                        <div class="form-group row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-10">
+                                <button class="btn btn-primary" id = "submitButton">Submit</button>
+                            </div>
+                        </div>
+                    </form> 
+
+                            
+            </div>
+
+           
+
+
+           </div>
+
+      
+
+
+        </div>
+
+    </body>
+    
+</html>
+{% endblock %}
+

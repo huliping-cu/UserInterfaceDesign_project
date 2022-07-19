@@ -1,0 +1,39 @@
+
+
+
+{% extends "layout.html" %}
+{% block content %}
+<html>
+    <!-- my javascript file -->
+    <script type="text/javascript" src="{{ url_for('static', filename = 'search.js') }}"></script>
+
+
+        
+    <script>
+        let itemReturned = {{itemReturned|tojson}} 
+        // console.log(itemReturned)
+        let enteredName = {{enteredName|tojson}}
+
+    </script>
+
+    <body>
+        <div class = "container">
+            <div class = "row"> 
+                <div> Search Results for : {{enteredName}}</div>
+
+            </div>
+
+            <div class="row">
+                <!-- <div class = "col-md-12" id = "warning"> </div> -->
+                <div class = "col-md-12 " id="updates"> 
+                </div>
+
+           </div>
+
+        </div>
+
+    </body>
+    
+</html>
+{% endblock %}
+

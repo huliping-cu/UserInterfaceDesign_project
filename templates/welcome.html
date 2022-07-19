@@ -1,0 +1,54 @@
+
+
+ <!DOCTYPE html>
+{% extends "layout.html" %}
+{% block content %}
+<html>
+    <!-- my javascript file -->
+    <script type="text/javascript" src="{{ url_for('static', filename = 'welcome.js') }}"></script>
+    <link rel="stylesheet" href="main.css">
+
+        
+    <script>
+        let data = {{data|tojson}} 
+        // console.log(data)
+
+    </script>
+
+
+    <head>
+        <title>Pandora Marvel series Charm collection </title>
+    </head>
+
+    <body>
+        <div class = "container">
+            <br>
+            <div class = "row">
+                <div class = "welcomeDiv">
+                    <span> Have fun checking out the</span> 
+                    <span class = "bold"> newst </span> 
+                    <span> series from Pandora! </span> 
+                
+                </div></br>
+            </div>
+            
+            <div class= "intro"> The most 
+                <span class = 'bold'>POPULAR </span>
+                
+                charms this week: </br></br><br>
+            </div>
+
+
+
+           <div class="row" id="updates">
+               <!-- <div class = "col-md-12" id="updates"></div> -->
+
+            </div>
+
+        </div>
+
+    </body>
+    
+</html>
+{% endblock %}
+
