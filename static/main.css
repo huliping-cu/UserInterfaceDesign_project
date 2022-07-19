@@ -1,0 +1,67 @@
+.form{
+    float: right;
+}
+.home{
+    background-color: rgb(243, 243, 243);
+
+}
+.welcomeDiv{
+    color: black;
+    padding: 10px;
+    font-size: 20px;
+}
+
+
+.bold{
+    /* font-style: italic; */
+    font-weight: bold;
+    color: rgb(154, 124, 187);
+}
+.intro{
+    color: black;
+    padding: 10px;
+}
+
+body{
+    background-color: rgb(238, 232, 243);
+}
+.create{
+    
+    font-size: 25px;
+    padding-top: 25px;
+    padding-left: 250px;
+}
+
+#edit{
+    padding-top:10px ;
+}
+
+#Container{
+    padding: 100px;
+    background-color: rgb(219, 207, 228);
+}
+
+
+form {
+  /* Center the form on the page */
+  margin: 0 auto;
+  width: 600px;
+  
+  padding: 10px;
+
+}
+
+
+.see_here{
+    color: blue;
+}
+
+#img{
+    height:200px;
+    width: 200px;
+}
+
+#review{
+    display: inline-block;
+    float: right;
+}
